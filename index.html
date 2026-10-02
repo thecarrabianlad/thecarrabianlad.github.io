@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sarthak Narula (maxx) — Computer Science Engineering student at Bennett University. Projects: Aether, Arqon, Netwik, CampusGenie.">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="MAXX_ — Sarthak Narula">
+<meta property="og:description" content="Building at the intersection of technology, creativity and real world impact.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050505'/%3E%3Ctext x='32' y='46' font-size='40' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23ff2a2a'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/hero-knight.webp">
+<title>MAXX_ — Sarthak Narula</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--panel:#0a0606;--red:#ff2a2a;--red2:#c41818;--dim:#7a2a2a;--line:#5a1414;--txt:#e8e0e0;--mut:#9a8a8a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--txt);font:13px/1.5 'JetBrains Mono',ui-monospace,Menlo,monospace;
+background-image:radial-gradient(rgba(255,42,42,.07) 1px,transparent 1px);background-size:22px 22px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 28px;background:rgba(5,5,5,.92);border-bottom:1px solid var(--red2);backdrop-filter:blur(6px)}
+.logo{font:400 38px/1 'VT323',monospace;color:var(--red);text-shadow:0 0 12px rgba(255,42,42,.6)}
+nav{display:flex;gap:30px;flex-wrap:wrap}
+nav a{color:var(--txt)}nav a span{color:var(--red)}nav a:hover,nav a.on{color:var(--red)}
+.clock{border:1px solid var(--red2);color:var(--red);padding:6px 14px;white-space:nowrap}
+main{max-width:1500px;margin:0 auto;padding:20px 24px 40px;display:grid;gap:18px;grid-template-columns:270px 1fr}
+.panel{background:var(--panel);border:1px solid var(--line);position:relative;padding:14px 16px}
+.panel::before,.panel::after{content:"";position:absolute;width:9px;height:9px;border:1px solid var(--red)}
+.panel::before{top:-1px;left:-1px;border-right:0;border-bottom:0}.panel::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.ttl{color:var(--red);font-size:12px;letter-spacing:.08em;margin-bottom:10px;display:flex;justify-content:space-between}
+.ttl b{font-weight:500;color:var(--dim)}
+.side{display:grid;gap:18px;align-content:start}
+.kv{display:grid;grid-template-columns:70px 1fr;padding:3px 0}.kv span{color:var(--mut)}.kv span::before{content:"› ";color:var(--red)}.kv b{font-weight:400;color:var(--red)}.kv b.w{color:var(--txt)}
+.dir a{display:flex;align-items:center;gap:10px;padding:6px 8px;color:var(--txt)}
+.dir a i{font-style:normal;color:var(--red);border:1px solid var(--line);width:16px;height:16px;display:grid;place-items:center;font-size:10px}
+.dir a:hover,.dir a.on{background:rgba(255,42,42,.1);color:var(--red)}
+.player{display:flex;gap:12px}.cover{width:56px;height:56px;background:#000 url(assets/player-globe.webp) center/cover;border:1px solid var(--line);flex:none}
+.bar{height:3px;background:#2a1010;margin:10px 0 4px}.bar i{display:block;height:100%;width:32%;background:var(--red)}
+.ctl{display:flex;justify-content:center;gap:22px;color:var(--red);margin-top:8px;font-size:15px}.ctl button{background:none;border:0;color:inherit;font:inherit;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:430px;overflow:hidden;padding:0}
+.hl{padding:28px 30px;position:relative;z-index:2}
+.prompt{color:var(--red)}.prompt em{color:var(--txt);font-style:normal}
+.cur{display:inline-block;width:9px;height:15px;background:var(--txt);vertical-align:-2px;animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
+h1{font:400 clamp(60px,8vw,104px)/.9 'VT323',monospace;margin:22px 0 14px;letter-spacing:.02em;color:var(--txt);text-shadow:0 0 18px rgba(255,255,255,.12)}
+h1 span{display:block;color:var(--red);text-shadow:0 0 22px rgba(255,42,42,.5)}
+.role{color:var(--mut);letter-spacing:.06em;margin-bottom:12px}.sub{max-width:360px;color:var(--txt);margin-bottom:26px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 26px;border:1px solid var(--line);color:var(--txt);min-width:200px}.btn.p{border-color:var(--red);color:var(--txt);background:rgba(255,42,42,.12);box-shadow:inset 0 0 18px rgba(255,42,42,.15)}
+.btn:hover{border-color:var(--red);color:var(--red)}.btn::before{content:"› ";color:var(--red)}
+.hr{position:relative;min-height:320px}
+.hero{background:linear-gradient(90deg,rgba(5,5,5,.55),rgba(5,5,5,0) 55%),#050505 url(assets/hero-bg.webp) center/cover no-repeat}
+.knight{position:absolute;right:2%;bottom:2%;height:96%;width:auto;max-width:96%;object-fit:contain;object-position:right bottom;z-index:1;pointer-events:none;user-select:none}
+.hr{z-index:2;pointer-events:none}
+@media(max-width:699px){.knight{height:auto;width:100%;max-width:none;right:0;bottom:8px}.hero{background-position:60% center}}
+.quote{position:absolute;top:18px;right:20px;width:220px;padding:12px 14px;color:var(--red);font-size:11px;border:1px solid transparent;background:linear-gradient(var(--red),var(--red)) top left/10px 1px no-repeat,linear-gradient(var(--red),var(--red)) top left/1px 10px no-repeat,linear-gradient(var(--red),var(--red)) bottom right/10px 1px no-repeat,linear-gradient(var(--red),var(--red)) bottom right/1px 10px no-repeat;background-color:rgba(5,5,5,.6)}
+.coords{position:absolute;right:20px;bottom:14px;color:var(--mut);font-size:11px;text-align:right}
+.full{grid-column:1/-1}
+.proj{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{border:1px solid var(--line);background:#080404;display:flex;flex-direction:column;transition:border-color .2s}.card:hover{border-color:var(--red)}
+.art{height:84px;background:linear-gradient(180deg,#2a0505,#080404);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.cb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cb h3{font-size:12px;font-weight:500}.cb h3 b{color:var(--red);font-weight:500;margin-right:8px}
+.cb p{color:var(--mut);font-size:12px;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}.tags span{border:1px solid var(--line);padding:2px 9px;font-size:11px}
+.go{align-self:flex-end;border:1px solid var(--red2);color:var(--red);width:26px;height:26px;display:grid;place-items:center}
+.row3{display:grid;grid-template-columns:1.25fr 1.1fr .8fr;gap:18px}
+.sk{display:grid;grid-template-columns:1fr 1fr;gap:6px 34px}
+.s{display:grid;grid-template-columns:80px 1fr;align-items:center;gap:8px;padding:4px 0}.s::before{display:none}
+.s i{height:9px;background:#2a1010;display:block}.s i b{display:block;height:100%;background:var(--red)}
+pre{font:11px/1.35 'JetBrains Mono',monospace;color:var(--red);white-space:pre-wrap}
+.nf{display:grid;grid-template-columns:auto 1fr;gap:20px;margin-top:8px}.nf .info{color:var(--txt);font-size:11px;line-height:1.45}.info b{color:var(--red);font-weight:500}
+.links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.links a{border:1px solid var(--line);padding:12px 4px;display:grid;justify-items:center;gap:6px;font-size:11px}.links a:hover{border-color:var(--red);color:var(--red)}.links svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6}
+.sec{scroll-margin-top:70px}
+@keyframes fm{from{transform:translate(var(--x),var(--y))}to{transform:none}}
+@keyframes ff{from{opacity:0}to{opacity:1}}
+.fly{animation:fm 1s cubic-bezier(.16,.84,.3,1) var(--d) both,ff 1s linear var(--d) both}
+body{overflow-x:clip}
+.art img{width:100%;height:100%;object-fit:cover;display:block}
+#contact{background:linear-gradient(90deg,var(--panel) 22%,rgba(10,6,6,.15) 75%),#0a0606 url(assets/contact-knight.webp) right 30%/cover no-repeat}
+.cmain{display:grid;gap:18px;align-content:start;min-width:0}
+.flash{box-shadow:0 0 0 1px var(--red),0 0 26px rgba(255,42,42,.55)!important}
+@media(min-width:700px){
+.sk{grid-auto-flow:column;grid-template-rows:repeat(5,auto)}
+html.fit,html.fit body{height:100%;overflow:hidden}
+html.fit :root,html.fit{padding:0}
+html.fit #stage{position:fixed;left:0;top:0;transform-origin:0 0;display:flex;flex-direction:column}
+html.fit header{position:static;flex:none;padding:10px 24px}
+html.fit main{flex:1;min-height:0;max-width:none;width:100%;margin:0;padding:14px 20px;gap:14px;grid-template-columns:260px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+html.fit .side{min-height:0;overflow:hidden;gap:12px;grid-template-rows:auto minmax(0,1fr) auto}
+html.fit .panel{padding:10px 14px}
+html.fit .ttl{margin-bottom:6px}
+html.fit .kv{padding:1px 0}
+html.fit .dir{overflow:hidden}
+html.fit .dir a{padding:3px 8px}
+html.fit .cmain{display:flex;flex-direction:column;gap:14px;min-height:0}
+html.fit .hero{flex:1;min-height:0}
+html.fit .hl{padding:18px 26px}
+html.fit h1{font-size:80px;margin:12px 0 8px}
+html.fit .sub{margin-bottom:16px}
+html.fit .btn{padding:11px 22px;min-width:170px}
+html.fit .hr{min-height:0}
+html.fit h1{font-size:62px!important;margin:8px 0 6px}
+html.fit .hl{padding:14px 26px}
+html.fit .role{margin-bottom:6px}html.fit .sub{margin-bottom:12px}
+html.fit .btn{padding:8px 20px;min-width:160px}
+html.fit .kv{grid-template-columns:84px 1fr}
+html.fit .s{grid-template-columns:104px 1fr;padding:1px 0}
+html.fit .sk{gap:2px 30px}
+html.fit .art{height:64px!important}
+html.fit .cb p{font-size:11px}
+html.fit .nf .info,html.fit .nf pre{font-size:10px;line-height:1.3}
+html.fit .quote{top:10px;right:12px;width:200px;padding:8px 10px}
+html.fit .coords{display:none}
+html.fit .panel{padding:8px 14px}
+html.fit .art{height:60px}
+html.fit .cb{padding:8px 10px 10px;gap:6px}
+html.fit .row3{gap:14px}
+html.fit .links{margin-top:8px}html.fit .links a{padding:8px 4px}
+}
+@media(max-width:699px){main{grid-template-columns:1fr}.side{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.proj{grid-template-columns:1fr 1fr}.row3{grid-template-columns:1fr}.hero{grid-template-columns:1fr}.hr{min-height:340px}}
+@media(max-width:699px){header{padding:10px 14px;flex-wrap:wrap}nav{gap:14px;font-size:12px;order:3;width:100%}.clock{display:none}main{padding:14px}.proj{grid-template-columns:1fr}.sk{grid-template-columns:1fr}.links{grid-template-columns:repeat(2,1fr)}.nf{grid-template-columns:1fr}.quote{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+.burger{display:none;margin-left:auto;width:42px;height:38px;background:none;border:1px solid var(--red2);flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer}
+.burger i{display:block;width:18px;height:2px;background:var(--red);transition:transform .25s,opacity .2s}
+.burger.open i:nth-child(1){transform:translateY(7px) rotate(45deg)}.burger.open i:nth-child(2){opacity:0}.burger.open i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:699px){
+header{padding:8px 14px;flex-wrap:nowrap}
+.logo{font-size:32px}
+.burger{display:flex}
+nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;width:auto;order:0;background:rgba(5,5,5,.98);border-bottom:1px solid var(--red2);padding:4px 0}
+nav.open{display:flex}
+nav a{padding:13px 18px;font-size:14px;border-bottom:1px solid var(--line)}nav a:last-child{border-bottom:0}
+main{padding:12px;gap:12px}
+.cmain{order:1;gap:12px}.side{order:2;gap:12px}.row3{order:3;gap:12px}
+.hero{display:flex;flex-direction:column;min-height:0}
+.hl{order:1;padding:16px 16px 0}
+h1{font-size:clamp(50px,17vw,78px);margin:12px 0 8px}
+.role{font-size:12px}
+.hr{display:none}
+.knight{position:static;order:2;width:100%;max-width:none;height:auto;margin:0;padding:0 6px 6px;right:auto;bottom:auto}
+.btns{margin-bottom:6px}.btns .btn{min-width:0;flex:1;padding:12px 14px;text-align:left}
+}
+.arch{width:142px;height:auto;mix-blend-mode:screen;align-self:center;display:block}
+@media(max-width:699px){.arch{width:150px;margin:0 auto}
+.rv{opacity:0;transform:translate(var(--x,0),var(--y,0));transition:opacity .8s linear,transform .8s cubic-bezier(.16,.84,.3,1);will-change:transform,opacity}
+.rv.in{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0a0606;border:1px solid var(--red);color:var(--txt);padding:10px 16px;z-index:50;font-size:12px;opacity:0;pointer-events:none;transition:opacity .25s}.toast.on{opacity:1}
+</style>
+</head>
+<body><div id="stage">
+<header>
+<a class="logo" href="#home">MAXX_</a>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+<nav id="nav"><a class="on" href="#home"><span>[01]</span> HOME</a><a href="#about"><span>[02]</span> ABOUT</a><a href="#projects"><span>[03]</span> PROJECTS</a><a href="#skills"><span>[04]</span> SKILLS</a><a href="#contact"><span>[05]</span> CONTACT</a></nav>
+<div class="clock" id="clock">--</div>
+</header>
+<main>
+<aside class="side" id="about">
+<section class="panel"><div class="ttl">/ SYSTEM <b>[ONLINE]</b></div>
+<div class="kv"><span>USER</span><b>maxx</b></div><div class="kv"><span>NAME</span><b>sarthak narula</b></div><div class="kv"><span>ROLE</span><b class="w">cse student</b></div><div class="kv"><span>LOCATION</span><b class="w">greater noida, india</b></div><div class="kv"><span>UPTIME</span><b class="w" id="up">72 days, 14 hrs</b></div><div class="kv"><span>STATUS</span><b>building...</b></div></section>
+<section class="panel dir"><div class="ttl">/ DIRECTORIES</div>
+<a class="on" href="#about"><i>›</i>about/</a><a href="#projects"><i>›</i>projects/</a><a href="#skills"><i>›</i>skills/</a><a href="#projects"><i>›</i>experience/</a><a href="#contact"><i>›</i>contact/</a><a href="#home"><i>›</i>assets/</a><a href="Sarthak_Narula_Resume.pdf" download="Sarthak_Narula_Resume.pdf"><i>›</i>resume.pdf</a></section>
+<section class="panel"><div class="ttl">/ NOW_PLAYING</div>
+<div class="player"><div class="cover"></div><div><div>Another Life</div><div style="color:var(--mut)">Arctic Monkeys</div></div></div>
+<div class="bar"><i id="pb"></i></div><div style="display:flex;justify-content:space-between;color:var(--mut);font-size:11px"><span id="pt">2:17</span><span>5:11</span></div>
+<div class="ctl"><button aria-label="Previous">⏮</button><button id="pp" aria-label="Pause">⏸</button><button aria-label="Next">⏭</button></div></section>
+</aside>
+
+<div class="cmain">
+<section class="panel hero sec" id="home">
+<img class="knight" src="assets/hero-knight.webp" alt="Cyber knight on a warhorse holding a flag in front of a red moon">
+<div class="hl">
+<div class="prompt">root@maxx:~$ <em id="cmd"></em><span class="cur"></span></div>
+<h1>SARTHAK<span>NARULA_</span></h1>
+<div class="role">COMPUTER SCIENCE ENGINEERING STUDENT</div>
+<p class="sub">Building at the intersection of technology, creativity and real world impact.</p>
+<div class="btns"><a class="btn p" href="#projects">VIEW PROJECTS</a><a class="btn" href="#about">ABOUT ME</a></div>
+</div>
+<div class="hr">
+<div class="quote">"BUILDING SYSTEMS, INTERFACES AND THINGS THAT PROBABLY SHOULDN'T WORK."<br>- MAXX</div>
+<div class="coords">LAT 28.5355° N<br>LON 77.3910° E<br>GREATER NOIDA, INDIA</div></div>
+</section>
+
+<section class="panel sec" id="projects"><div class="ttl">/ RECENT_PROJECTS <b>[ VIEW ALL ]</b></div>
+<div class="proj">
+<article class="card"><div class="art"><img src="assets/project-aether.webp" alt="" style="object-position:50% 30%"></div><div class="cb"><h3><b>[01]</b>AETHER</h3><p>Cross-platform student planner with habit tracking, schedules and more.</p><div class="tags"><span>Flutter</span><span>Supabase</span><span>Dart</span></div><a class="go" href="https://thecarrabianlad.github.io/aetherweb/" target="_blank" rel="noopener noreferrer" aria-label="Open Aether website">↗</a></div></article>
+<article class="card"><div class="art"><img src="assets/project-arqon.webp" alt="" style="object-position:50% 50%"></div><div class="cb"><h3><b>[02]</b>ARQON</h3><p>AI-powered criminal network analysis system for SIH 2026.</p><div class="tags"><span>Python</span><span>FastAPI</span><span>ML</span></div><a class="go" href="#" aria-label="Open Arqon">↗</a></div></article>
+<article class="card"><div class="art"><img src="assets/project-netwik.webp" alt="" style="object-position:50% 50%"></div><div class="cb"><h3><b>[03]</b>NETWIK</h3><p>Network monitoring application with real-time analytics.</p><div class="tags"><span>Python</span><span>Networking</span><span>Linux</span></div><a class="go" href="#" aria-label="Open Netwik">↗</a></div></article>
+<article class="card"><div class="art"><img src="assets/project-campusgenie.webp" alt="" style="object-position:50% 50%"></div><div class="cb"><h3><b>[04]</b>CAMPUSGENIE</h3><p>AI chatbot that helps students find info on classes, facilities and events.</p><div class="tags"><span>React</span><span>AI / LLM</span><span>Supabase</span></div><a class="go" href="#" aria-label="Open CampusGenie">↗</a></div></article>
+</div></section>
+</div>
+
+<div class="row3 full">
+<section class="panel sec" id="skills"><div class="ttl">/ SKILLS</div><div class="sk" id="sk"></div></section>
+<section class="panel"><div class="ttl">/ TERMINAL</div>
+<pre>maxx@portfolio:~$ neofetch</pre>
+<div class="nf"><img class="arch" src="assets/arch-logo.webp" alt="Arch Linux logo in red ASCII art">
+<div class="info"><b>sarthak@maxx</b><br>OS: Arch Linux<br>Host: Predator Helios 300<br>Kernel: 6.6.0<br>Shell: zsh<br>WM: bspwm<br>Terminal: alacritty<br>CPU: Intel i5-10300H<br>GPU: NVIDIA RTX 2060<br>Memory: 6.4GiB / 15.6GiB</div></div></section>
+<section class="panel sec" id="contact"><div class="ttl">/ CONTACT</div><div>Let's build something great.</div>
+<div class="links">
+<a href="https://github.com/thecarrabianlad" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 21v-3c-3 1-3-2-4-2M15 21v-3.500c0-1 .3-1.500-.5-2.500 3-.3 4.500-1.500 4.500-4.500 0-1-.4-2-1-2.700.2-.8.2-1.800-.2-2.600 0 0-1 0-2.300 1a8 8 0 0 0-4 0C10 4.700 9 4.700 9 4.700c-.4.800-.4 1.800-.2 2.600-.6.700-1 1.700-1 2.700 0 3 1.500 4.200 4.500 4.500"/></svg>GitHub</a>
+<a href="https://www.linkedin.com/in/sarthak-narula-b063b7278/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v6M8 7v.01M12 17v-6M12 13c0-3 5-3 5 0v4"/></svg>LinkedIn</a>
+<a href="mailto:sarthak.2803.main@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+<a href="Sarthak_Narula_Resume.pdf" download="Sarthak_Narula_Resume.pdf"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg>Resume</a>
+</div></section>
+</div>
+</main></div>
+<script>
+(function(){
+var d=document;
+function tick(){var n=new Date(),D=['SUN','MON','TUE','WED','THU','FRI','SAT'],M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'],p=function(x){return String(x).padStart(2,'0')};
+d.getElementById('clock').textContent=D[n.getDay()]+' '+p(n.getDate())+' '+M[n.getMonth()]+' '+n.getFullYear()+'    '+p(n.getHours())+':'+p(n.getMinutes())+':'+p(n.getSeconds())}
+tick();setInterval(tick,1000);
+var c='./intro',i=0,el=d.getElementById('cmd');(function t(){if(i<=c.length){el.textContent=c.slice(0,i++);setTimeout(t,130)}})();
+var S=[['Python',76],['C',50],['JavaScript',42],['Dart',40],['Linux',45],['Flutter',62],['React',40],['FastAPI',45],['Supabase',52],['Networking',45]],h='';
+S.forEach(function(s){h+='<div class="kv s"><span>'+s[0]+'</span><i><b style="width:'+s[1]+'%"></b></i></div>'});d.getElementById('sk').innerHTML=h;
+var t0=137,play=true,pt=d.getElementById('pt'),pb=d.getElementById('pb'),pp=d.getElementById('pp');
+setInterval(function(){if(!play)return;t0=(t0+1)%311;pt.textContent=Math.floor(t0/60)+':'+String(t0%60).padStart(2,'0');pb.style.width=(t0/311*100)+'%'},1000);
+pp.onclick=function(){play=!play;pp.textContent=play?'⏸':'▶'};
+var links=[].slice.call(d.querySelectorAll('#nav a'));var FL=[['header',0,-90,0],['.side .panel:nth-child(1)',-320,0,.1],['.side .panel:nth-child(2)',-320,140,.25],['.side .panel:nth-child(3)',-240,260,.4],['.hero',340,-140,.2],['#projects',0,280,.5],['#skills',-300,260,.7],['.row3 .panel:nth-child(2)',0,320,.85],['#contact',320,260,1]];
+if(matchMedia('(min-width:700px)').matches)FL.forEach(function(f){var e=d.querySelector(f[0]);if(e){e.style.setProperty('--x',f[1]+'px');e.style.setProperty('--y',f[2]+'px');e.style.setProperty('--d',f[3]+'s');e.classList.add('fly');setTimeout(function(){e.classList.remove('fly')},2200)}});
+var RV=[['.hero',0,70],['.proj .card:nth-child(odd)',-90,40],['.proj .card:nth-child(even)',90,40],['.side .panel:nth-child(odd)',-90,0],['.side .panel:nth-child(even)',90,0],['#skills',90,0],['.row3 .panel:nth-child(2)',-90,0],['#contact',0,80]],io=new IntersectionObserver(function(es){es.forEach(function(x){x.target.classList.toggle('in',x.isIntersecting)})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+RV.forEach(function(v){d.querySelectorAll(v[0]).forEach(function(e){e.style.setProperty('--x',v[1]+'px');e.style.setProperty('--y',v[2]+'px');e.classList.add('rv');io.observe(e)})});
+var mq=matchMedia('(min-width:700px)'),st=d.getElementById('stage'),H=d.documentElement;
+function fit(){if(mq.matches){var s=Math.min(innerWidth/1100,innerHeight/900);H.classList.add('fit');st.style.width=innerWidth/s+'px';st.style.height=innerHeight/s+'px';st.style.transform='scale('+s+')'}else{H.classList.remove('fit');st.style.cssText=''}scrollTo(0,0)}
+var bg=d.getElementById('burger'),nv=d.getElementById('nav');
+function mn(o){nv.classList.toggle('open',o);bg.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Close menu':'Open menu')}
+bg.onclick=function(){mn(!nv.classList.contains('open'))};
+links.forEach(function(l){l.addEventListener('click',function(){mn(false)})});
+d.addEventListener('keydown',function(e){if(e.key==='Escape')mn(false)});
+mq.addEventListener('change',function(){mn(false)});
+fit();addEventListener('resize',fit);addEventListener('orientationchange',fit);
+d.addEventListener('click',function(e){if(!H.classList.contains('fit'))return;var a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();var id=a.getAttribute('href').slice(1),t=id&&d.getElementById(id);links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+id)});if(t){var f=t.classList.contains('panel')?t:t.querySelector('.panel');if(f){f.classList.add('flash');setTimeout(function(){f.classList.remove('flash')},900)}}});
+
+var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+x.target.id)})}})},{threshold:.5});
+['home','projects','skills','contact'].forEach(function(id){obs.observe(d.getElementById(id))});
+})();
+</script>
+</body>
+</html>
